@@ -18,11 +18,11 @@ export async function generateMetaData({params}:PropsParams) : Promise<Metadata>
     try{
         const response:GameProps = await fetch(`${process.env.NEXT_API}/next-api/?api=game&id=${params.id}` ,{next:{revalidate:320}})
         .then((res) => res.json())
-        // .catch(() => {
-        //     return{
-        //         title:"DailyGames, descubra jogos incriveis para se devertir"
-        //     }
-        // })
+        .catch(() => {
+            return{
+                title:"DailyGames, descubra jogos incriveis para se devertir"
+            }
+        })
         // console.log(response.title)
 
         return{
