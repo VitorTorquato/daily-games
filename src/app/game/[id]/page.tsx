@@ -13,7 +13,7 @@ interface PropsParams{
     }
 }
 
-export async function generateMetaData({params}:PropsParams) : Promise<Metadata>{
+export async function generateMetadata({params}:PropsParams) : Promise<Metadata>{
 
     try{
         const response:GameProps = await fetch(`${process.env.NEXT_API}/next-api/?api=game&id=${params.id}` ,{next:{revalidate:320}})
@@ -78,11 +78,7 @@ async function getRandomGame(){
 
 
 
-export default async function Game({
-    params,
-}:{
-    params:{id:string}
-}){
+export default async function Game({ params }: { params: { id: string } }){
 
     const {id} = params
     

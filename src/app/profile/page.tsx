@@ -5,7 +5,7 @@ import {FaShareAlt} from 'react-icons/fa'
 import { FavoriteCard } from "./components/favorite";
 import { Metadata } from "next";
 
-export const metaData :Metadata = {
+export const metadata :Metadata = {
     title: "Meu perfil - Daily Games sua plataforma de jogos!",
     description: "Perfil Sujeito Programador | Daily Games sua plataforma de jogos!"
 }
